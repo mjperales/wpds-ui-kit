@@ -1,5 +1,6 @@
 // insert new component exports here
 export * from "@washingtonpost/wpds-input-text";
+export * from "@washingtonpost/wpds-text-area";
 export * from "@washingtonpost/wpds-checkbox";
 export * from "@washingtonpost/wpds-alert-banner";
 export * from "@washingtonpost/wpds-button";

@@ -1,6 +1,6 @@
 {
-	"name": "@washingtonpost/wpds-{{ dashCase componentName }}",
-	"version": "{{ version }}",
+	"name": "@washingtonpost/wpds-text-area",
+	"version": "0.6.2",
 	"description": "> TODO: description",
 	"author": "WPDS Support <wpds@washpost.com>",
 	"homepage": "https://github.com/WPMedia/wpds-ui-kit#readme",
@@ -38,8 +38,5 @@
 	"peerDependencies": {
 		"@washingtonpost/wpds-theme": "*",
 		"react": "^16.8.6 || ^17.0.2"
-	},
-	"dependencies": {
-		"@washingtonpost/wpds-theme": "*",
 	}
 }
