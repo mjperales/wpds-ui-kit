@@ -1,8 +1,8 @@
 import * as React from "react";
-import { TextArea as Component } from "./";
+import { InputTextArea as Component } from "./";
 
 export default {
-  title: "TextArea",
+  title: "InputTextArea",
   component: Component,
 };
 
@@ -10,7 +10,7 @@ const Template = (args) => <Component {...args} />;
 
 export const Play = Template.bind({});
 
-Play.storyName = "TextArea";
+Play.storyName = "InputTextArea";
 
 Play.args = {
   canResize: false,

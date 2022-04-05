@@ -2,9 +2,9 @@ import * as React from "react";
 import * as Theme from "@washingtonpost/wpds-theme";
 import type * as WPDS from "@washingtonpost/wpds-theme";
 
-const NAME = "TextArea";
+const NAME = "InputTextArea";
 
-export const TextAreaCSS = Theme.css({
+export const InputTextAreaCSS = Theme.css({
   borderRadius: "$012",
   border: "1px solid $subtle",
   fontFamily: "$meta",
@@ -54,7 +54,7 @@ export const TextAreaCSS = Theme.css({
     },
     state: {
       /**
-       * Display an error state when the textarea is invalid.
+       * Display an error state when the InputTextArea is invalid.
        */
       error: {
         borderColor: "$error",
@@ -79,22 +79,22 @@ const ControlCSS = Theme.css({
   position: "relative",
 });
 
-type TextAreaVariants = WPDS.VariantProps<typeof TextAreaCSS>;
+type InputTextAreaVariants = WPDS.VariantProps<typeof InputTextAreaCSS>;
 
-interface TextAreaInterface extends TextAreaVariants {
+interface InputTextAreaInterface extends InputTextAreaVariants {
   /** Override CSS */
   css?: WPDS.CSS;
   /** Label (use instead of Placeholder) */
   label: string;
-  /** An id attribute to allow the <textarea> to be associated with a <label> element for accessibility purposes */
+  /** An id attribute to allow the <InputTextArea> to be associated with a <label> element for accessibility purposes */
   id: string;
   /** A name attribute to set the name of the associated data point submitted to the server when the form is submitted. */
   name: string;
 }
 
-export const TextArea = React.forwardRef<
+export const InputTextArea = React.forwardRef<
   HTMLTextAreaElement,
-  TextAreaInterface
+  InputTextAreaInterface
 >(({ css, id, name, canResize, state, label, children, ...props }, ref) => {
   return (
     <div className={ControlCSS()}>
@@ -103,7 +103,7 @@ export const TextArea = React.forwardRef<
         id={id}
         name={name}
         ref={ref}
-        className={TextAreaCSS({
+        className={InputTextAreaCSS({
           css: css,
           canResize: canResize,
           state: state,
@@ -118,8 +118,8 @@ export const TextArea = React.forwardRef<
   );
 });
 
-type TextAreaProps = React.ComponentProps<typeof TextArea>;
+type InputTextAreaProps = React.ComponentProps<typeof InputTextArea>;
 
-TextArea.displayName = NAME;
+InputTextArea.displayName = NAME;
 
-export type { TextAreaProps };
+export type { InputTextAreaProps };
